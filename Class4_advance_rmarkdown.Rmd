@@ -29,15 +29,13 @@ We can see the figure at \@ref(fig:my-fig)
 
 The following is the citation of the research paper 'A developmental perspective on the role of motor skill competence in physical activity: An emergent relationship' by Stodden et al. [@stodden2008developmental].
 
-
 ##task 4 Has a step-up chunk, with 3+ setting
 
-```{ r, setup, echo = FALSE}
-
+```{r setup, include  = FALSE}
 knitr::opts_chunk$set(
 collapse = TRUE,
 warning = FALSE,
-message = FASLE,
+message = FALSE,
 echo = FALSE,
 comment = "#>",
 fig.path = "../figures/"
