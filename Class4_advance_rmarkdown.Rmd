@@ -45,3 +45,6 @@ fig.path = "../figures/"
 
 ```
 
+## task 5 Uses code from an external R script file and knitr::read_chunk()
+
+
