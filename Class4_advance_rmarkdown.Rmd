@@ -24,7 +24,6 @@ echo = FALSE,
 comment = "#>",
 fig.path = "../figures/"
 )
-
 ```
 
 ## Task 5: Uses code from an external R script file and knitr::read_chunk()
@@ -37,10 +36,7 @@ data <- data(starwars)
 knitr::read_chunk("my-external-code.R")
 ```
 
-
-This code chunk will pass the source code and fully print and evaluate all code in the external script
-
-```{r code = readLines('my-external-code.R')}
+```{r starwars-plot, dependson="load-data", fig.align='center', cache=TRUE}
 ```
 
 ## Task 1: Uses starwars dataset & tidyverse 
