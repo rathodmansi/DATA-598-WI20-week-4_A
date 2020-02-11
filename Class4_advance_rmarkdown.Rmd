@@ -31,7 +31,8 @@ fig.path = "../figures/"
 The code chunk shows that we cannot easily show the code in the external script file using `source()`.
 
 ```{r RunCodeChunkNoEval, eval=FALSE} 
-source('my-external-code.R')
+knitr::read_chunk('my-external-code.R')
+##source('my-external-code.R')
 ``` 
 
 The code chunk executes the externally located code using `source()`. When using this method, we cannot easily print the code. Text output is suppressed because we are using `results='hide'` and figures are plotted, but only after all of the code is executed. 
