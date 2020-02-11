@@ -29,24 +29,14 @@ fig.path = "../figures/"
 
 ## Task 5: Uses code from an external R script file and knitr::read_chunk()
 
-The code chunk shows that we cannot easily show the code in the external script file using `source()`.
+The code chunk executes the externally located code using knitrr::read_chunk(). When using this method, we easily print the code. This code chunk will pass the source code and fully print and evaluate all code in the external script
 
-```{r RunCodeChunkNoEval, eval=FALSE} 
-knitr::read_chunk('my-external-code.R')
-##source('my-external-code.R')
-``` 
-
-The code chunk executes the externally located code using `source()`. When using this method, we cannot easily print the code. Text output is suppressed because we are using `results='hide'` and figures are plotted, but only after all of the code is executed. 
-
-```{r RunCodeChunk, results='hide'} 
-source('my-external-code.R')
-``` 
-
-The code chunk executes the externally located code using `source()`. When using this method, we cannot easily print the code. Text output is only for objects that we use `print()` on. And figures are plotted, but only after all of the code is executed. 
-
-```{r RunCodeChunkShowAll, echo=FALSE} 
-source('my-external-code.R')
+```{r load-data, message=FALSE}
+library(tidyverse)
+data <- data(starwars)
+knitr::read_chunk("my-external-code.R")
 ```
+
 
 This code chunk will pass the source code and fully print and evaluate all code in the external script
 
