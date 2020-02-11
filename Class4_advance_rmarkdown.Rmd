@@ -54,7 +54,7 @@ This code chunk will pass the source code and fully print and evaluate all code 
 ## Task 1: Uses starwars dataset & tidyverse 
 ## Task 2: Has a plot and table with captions and cross-references
 
-```{r starwars-plot, fig.cap = "A ggplot of starwars stuf"}
+```{r starwars-plot, fig.cap = "A ggplot of starwars stuf", cache = TRUE}
 library(tidyverse)
 starwars %>% filter(species == "Human") %>% ggplot() + aes(x = height, y = mass) + geom_point()
 ```
