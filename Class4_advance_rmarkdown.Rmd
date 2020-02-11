@@ -15,6 +15,7 @@ link-citations: no
 ## Task 4 Has a step-up chunk, with 3+ setting
 
 ```{r setup, include  = FALSE}
+library(tufte)
 knitr::opts_chunk$set(
 collapse = TRUE,
 warning = FALSE,
@@ -55,14 +56,14 @@ This code chunk will pass the source code and fully print and evaluate all code 
 ## Task 1: Uses starwars dataset & tidyverse 
 ## Task 2: Has a plot and table with captions and cross-references
 
-```{r starwars-plot, fig.cap = "A ggplot of starwars stuf", cache = TRUE}
+```{r starwars-plot, dependson= "load-data", fig.cap = "A ggplot of starwars stuf", cache = TRUE}
 library(tidyverse)
 starwars %>% filter(species == "Human") %>% ggplot() + aes(x = height, y = mass) + geom_point()
 ```
 
 We can see in figure \@ref(fig:starwars-plot)
 
-```{r starwars-tbl}
+```{r starwars-tbl, dependson= "load-data", cache =TRUE}
 starwars %>% filter(species == "Human") %>% select(name,height, mass, homeworld) %>% knitr::kable(caption = "A knitr kable table of starwars data")
 ```
 
