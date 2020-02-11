@@ -77,3 +77,5 @@ We can see the figure at \@ref(fig:my-fig)
 
 The following is the citation of the research paper 'A developmental perspective on the role of motor skill competence in physical activity: An emergent relationship' by Stodden et al. [@stodden2008developmental].
 
+[@stodden2008developmental] is an in-text citation of research paper written by Stodden and was published in 2008.
+
