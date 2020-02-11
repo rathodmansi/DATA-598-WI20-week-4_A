@@ -12,9 +12,7 @@ bibliography: my_bibliography.bib
 link-citations: no
 ---
 
-Here is inline text `r 2 + 2`
-
-##task 4 Has a step-up chunk, with 3+ setting
+## Task 4 Has a step-up chunk, with 3+ setting
 
 ```{r setup, include  = FALSE}
 knitr::opts_chunk$set(
@@ -28,7 +26,7 @@ fig.path = "../figures/"
 
 ```
 
-##task 5: Uses code from an external R script file and knitr::read_chunk()
+## Task 5: Uses code from an external R script file and knitr::read_chunk()
 
 The code chunk shows that we cannot easily show the code in the external script file using `source()`.
 
@@ -53,6 +51,8 @@ This code chunk will pass the source code and fully print and evaluate all code 
 ```{r code = readLines('my-external-code.R')}
 ```
 
+## Task 1: Uses starwars dataset & tidyverse 
+## Task 2: Has a plot and table with captions and cross-references
 
 ```{r starwars-plot, fig.cap = "A ggplot of starwars stuf"}
 library(tidyverse)
@@ -72,6 +72,8 @@ knitr::include_graphics("uw-w.jpg")
 ```
 
 We can see the figure at \@ref(fig:my-fig) 
+
+## Task 3: Has two in-text citations using bibtex
 
 The following is the citation of the research paper 'A developmental perspective on the role of motor skill competence in physical activity: An emergent relationship' by Stodden et al. [@stodden2008developmental].
 
